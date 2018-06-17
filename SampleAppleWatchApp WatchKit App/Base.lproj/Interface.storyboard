@@ -1,14 +1,59 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SampleAppleWatchApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="cYe-Wh-D0D">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="Yxp-Fm-e30"/>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="qMb-dg-Lwn">
+                            <items>
+                                <label alignment="left" text="⭕️" id="1Ue-hf-V7V">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <timer alignment="right" textAlignment="right" id="3wx-vl-GTz"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="NaN-KJ-EIo">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="A" id="owD-h3-L7v">
+                                    <connections>
+                                        <action selector="buttonWasTapped" destination="AgC-eL-Hgc" id="DTD-jq-ddw"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="center" title="B" id="nre-mO-A8Q">
+                                    <connections>
+                                        <action selector="bButtonWasTapped" destination="AgC-eL-Hgc" id="3U0-aT-cJL"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="right" title="C" id="7ZM-qa-NIn">
+                                    <connections>
+                                        <action selector="cButtonWasTapped" destination="AgC-eL-Hgc" id="LgP-QY-KMF"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="owD-h3-L7v" id="6f3-93-X2S"/>
+                        <outlet property="commonLabel" destination="cYe-Wh-D0D" id="RpU-o2-Ura"/>
+                        <outlet property="questionLabel" destination="Yxp-Fm-e30" id="Ndm-ZC-Yvv"/>
+                        <outlet property="resultLabel" destination="1Ue-hf-V7V" id="i0u-xp-9MT"/>
+                        <outlet property="timerLabel" destination="3wx-vl-GTz" id="2OP-BO-6et"/>
+                    </connections>
+                </controller>
             </objects>
         </scene>
     </scenes>
