@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-h
+
 class InterfaceController: WKInterfaceController {
     @IBOutlet var commonLabel: WKInterfaceLabel!
     @IBOutlet var questionLabel: WKInterfaceLabel!
